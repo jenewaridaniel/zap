@@ -88,7 +88,7 @@ const _layout = () => {
           tabBarIcon: ({ focused, color }) => (
             <View>
               <Ionicons
-                name={focused ? "cart" : "cart-outline"}
+                name={focused ? "bag" : "bag-outline"}
                 size={24}
                 color={color}
               />
