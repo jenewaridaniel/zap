@@ -1,6 +1,7 @@
-import { StyleSheet, TextInput, View, TouchableOpacity, Image, ScrollView, StatusBar } from "react-native";
+import { StyleSheet,Text, TextInput, View, TouchableOpacity, Image, ScrollView, StatusBar } from "react-native";
 import React from "react";
 import { Ionicons } from "@expo/vector-icons";
+import Category from "../../Component/category";
 
 const index = () => {
   return (
@@ -33,6 +34,13 @@ const index = () => {
           source={require('../../assets/images/apple.jpeg')}
           style={styles.bannerImage}
         />
+       <View>
+        <View style={styles.containers}>
+        <Text style={styles.textcategory}>Flash Deals for You</Text>
+        <Text>See all</Text>
+        </View>
+        <Category/>
+       </View>
       </View>
 
     </ScrollView>
@@ -45,7 +53,8 @@ export default index;
 const styles = StyleSheet.create({
   scrollContainer: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "#f5f6fA",
+    fontFamily:'sans'
   },
   container: {
     flexDirection: "row",
@@ -55,6 +64,14 @@ const styles = StyleSheet.create({
     paddingBottom: 10,
     backgroundColor: "#fff",
     elevation: 3,
+  },
+  containers:{
+     flexDirection:'row',
+      alignItems: "center",
+     justifyContent:'space-between',
+     fontFamily:'sans',
+    paddingHorizontal: 15,
+    paddingBottom: 10,
   },
   iconButton: {
     width: 40,
@@ -84,4 +101,10 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     resizeMode: "cover",
   },
+  textcategory:{
+  fontSize:19,
+  fontWeight:'700',
+  paddingVertical: 35,
+
+  }
 });
